@@ -1,3 +1,5 @@
+const MongoClient = require('mongodb').MongoClient;
+
 const createProduct = async (req, res, next) => {};
 
 const getProducts = async (req, res, next) => {};
