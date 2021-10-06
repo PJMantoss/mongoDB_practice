@@ -1,5 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 
+const url = 'mongodb+srv://Toss:<password>@cluster0.kxgzl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
 const createProduct = async (req, res, next) => {};
 
 const getProducts = async (req, res, next) => {};
