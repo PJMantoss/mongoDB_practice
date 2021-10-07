@@ -13,7 +13,7 @@ const createProduct = async (req, res, next) => {
     try{
         await client.connect(); //Establishes connection with mongodb server (cluster)
         const db = client.db();
-        const result;
+        const result = db.collection().insertOne();
     }catch(err){
         res.json({ message: 'Could not connect to server' })
     }
