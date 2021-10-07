@@ -31,7 +31,7 @@ const getProducts = async (req, res, next) => {
     try{
         await client.connect();
         const db = client.db();
-        products = db.collection('products').find().toArray();
+        products = await db.collection('products').find().toArray();
     }catch(err){
         res.json({ message: 'Could not retrieve products' });
     }
