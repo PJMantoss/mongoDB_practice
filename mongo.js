@@ -13,7 +13,7 @@ const createProduct = async (req, res, next) => {
     try{
         await client.connect(); //Establishes connection with mongodb server (cluster)
         const db = client.db();
-        const result = db.collection('products').insertOne(newProduct);
+        const result = await db.collection('products').insertOne(newProduct);
     }catch(err){
         res.json({ message: 'Could not store data' });
     };
