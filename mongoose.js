@@ -17,6 +17,8 @@ const createProduct = async (req, res, next) => {
     });
 
     const result = await createdProduct.save();
+
+    res.json(result);
 };
 
 exports. createProduct = createProduct;
