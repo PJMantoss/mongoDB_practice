@@ -6,7 +6,9 @@ const createProduct = async (req, res, next) => {
     const newProduct = {
         name: req.body.name,
         price: req.body.price
-    }
+    };
+
+    const client = new MongoClient(url);
 };
 
 const getProducts = async (req, res, next) => {};
