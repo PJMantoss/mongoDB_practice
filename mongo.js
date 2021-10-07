@@ -15,7 +15,7 @@ const createProduct = async (req, res, next) => {
         const db = client.db();
         const result = db.collection('products').insertOne(newProduct);
     }catch(err){
-        res.json({ message: 'Could not connect to server' })
+        res.json({ message: 'Could not store data' });
     }
 };
 
