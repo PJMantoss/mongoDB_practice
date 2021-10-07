@@ -26,9 +26,12 @@ const createProduct = async (req, res, next) => {
 const getProducts = async (req, res, next) => {
     const client = new MongoClient(url);
 
+    let products;
+
     try{
         await client.connect();
         const db = client.db();
+        products = db.collection('products').find().toArray();
     }catch(err){}
 };
 
