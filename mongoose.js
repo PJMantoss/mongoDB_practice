@@ -6,7 +6,9 @@ mongoose.connect(
     'mongodb+srv://pj:kingdom@cluster0.kxgzl.mongodb.net/products_test?retryWrites=true&w=majority'
 ).then(() => {
     console.log('Connected to database!')
-}).catch();
+}).catch(() => {
+    console.log('Connection failed.')
+});
 
 const createProduct = async (req, res, next) => {
     const createdProduct = new Product({
