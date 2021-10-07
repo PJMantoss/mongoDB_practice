@@ -32,7 +32,13 @@ const getProducts = async (req, res, next) => {
         await client.connect();
         const db = client.db();
         products = db.collection('products').find().toArray();
-    }catch(err){}
+    }catch(err){
+        res.json({ message: 'Could not retrieve products' });
+    }
+
+    client.close();
+
+    
 };
 
 exports.createProduct = createProduct;
