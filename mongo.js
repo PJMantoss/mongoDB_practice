@@ -16,7 +16,11 @@ const createProduct = async (req, res, next) => {
         const result = db.collection('products').insertOne(newProduct);
     }catch(err){
         res.json({ message: 'Could not store data' });
-    }
+    };
+
+    client.close();
+
+    res.json(newProduct);
 };
 
 const getProducts = async (req, res, next) => {};
