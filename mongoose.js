@@ -8,3 +8,5 @@ const createProduct = async (req, res, next) => {
         price: req.body.price
     })
 };
+
+exports. createProduct = createProduct;
