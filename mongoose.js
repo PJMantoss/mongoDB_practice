@@ -27,5 +27,5 @@ const getProducts = async (req, res, next) => {
     res.json(products);
 };
 
-exports. createProduct = createProduct;
-exports.getProducts = getProducts
+exports.createProduct = createProduct;
+exports.getProducts = getProducts;
