@@ -28,3 +28,4 @@ const getProducts = async (req, res, next) => {
 };
 
 exports. createProduct = createProduct;
+exports.getProducts = getProducts
