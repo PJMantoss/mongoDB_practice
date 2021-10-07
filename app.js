@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.json());
 
-app.post('/products');
+app.post('/products', mongoPractice.createProduct);
 
 app.get('/products');
 
