@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoPractice = require('./mongo');
 
 
 const app = express();
