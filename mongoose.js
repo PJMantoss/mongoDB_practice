@@ -14,7 +14,9 @@ const createProduct = async (req, res, next) => {
     const createdProduct = new Product({
         name: req.body.name,
         price: req.body.price
-    })
+    });
+
+    const result = await createdProduct.save();
 };
 
 exports. createProduct = createProduct;
