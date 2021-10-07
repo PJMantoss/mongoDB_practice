@@ -11,7 +11,7 @@ const createProduct = async (req, res, next) => {
     const client = new MongoClient(url);
 
     try{
-        await client.connect();
+        await client.connect(); //Establishes connection with mongodb server (cluster)
     }catch(err){
         res.json({ message: 'Could not connect to server' })
     }
