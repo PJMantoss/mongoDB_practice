@@ -9,6 +9,12 @@ const createProduct = async (req, res, next) => {
     };
 
     const client = new MongoClient(url);
+
+    try{
+        await client.connect();
+    }catch(err){
+        res.json({ message: 'Could not connect to server' })
+    }
 };
 
 const getProducts = async (req, res, next) => {};
