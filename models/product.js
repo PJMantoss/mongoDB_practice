@@ -1,3 +1,3 @@
 const mongoose = require('mongoose');
 
-const productSchema;
+const productSchema = new mongoose.Schema({});
