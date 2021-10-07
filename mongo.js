@@ -38,7 +38,7 @@ const getProducts = async (req, res, next) => {
 
     client.close();
 
-    
+    res.json(products);
 };
 
 exports.createProduct = createProduct;
